@@ -8,10 +8,12 @@
 # `next_f32` would break that quietly, in a way no test on either side would
 # catch.
 #
-# Deliberately NOT a workspace member of plank: it targets
-# wasm32-unknown-unknown. This is also the first piece of a plugin SDK — the
-# thing that makes third-party authoring plausible — which is why it is a real
-# crate rather than an `include!`.
+# Its own repository rather than a directory of plank's: plank's guests and the
+# separate csvedit component all pin it by git rev, so they share one copy
+# without cloning plank. It builds for wasm32-unknown-unknown and wasm32-wasip1
+# alike. This is also the first piece of a plugin SDK — the thing that makes
+# third-party authoring plausible — which is why it is a real crate rather than
+# an `include!`.
 [workspace]
 
 [package]
@@ -19,6 +21,8 @@ name = "plank-guest-support"
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
+authors = ["Enzo Lombardi <enzinol@gmail.com>"]
+repository = "https://github.com/aovestdipaperino/plank-guest-support"
 publish = false
 
 [lib]
