@@ -1,5 +1,7 @@
 # plank-guest-support
 
+[![GitHub stars](https://img.shields.io/github/stars/aovestdipaperino/plank-guest-support?logo=github&color=brightgreen)](https://github.com/aovestdipaperino/plank-guest-support/stargazers)
+
 The shared half of a [plank](https://github.com/aovestdipaperino/plank) WASM
 plugin guest: the seeded RNG, the glyph packing the frame wire format carries,
 and the small JSON readers every component needs for its `OpenParams`.
